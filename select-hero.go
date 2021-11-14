@@ -18,6 +18,7 @@ func selectHero() bool {
 			fmt.Println("click hero")
 			break
 		}
+
 		robotgo.Sleep(1)
 		_count--
 	}
@@ -47,6 +48,12 @@ func selectHero() bool {
 		if color == "7c9e52" || color == "6f8d5a" {
 			robotgo.Click("left")
 			robotgo.Sleep(1)
+		} else if color == "e6b7a7" {
+			robotgo.Move(923, 361) // error overload
+			robotgo.Sleep(1)
+			robotgo.Click("left")
+			robotgo.Sleep(1)
+			fmt.Println("close overload")
 		} else if color == "a5d386" {
 			break
 		}
