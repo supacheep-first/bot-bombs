@@ -15,7 +15,7 @@ func login() bool {
 			robotgo.Move(642, 737)
 			robotgo.Click("left") // connect wallet
 			fmt.Println("click connect wallet")
-			robotgo.Sleep(5)
+			robotgo.Sleep(2)
 			continue
 		}
 		robotgo.Sleep(2)

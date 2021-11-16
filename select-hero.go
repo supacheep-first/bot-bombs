@@ -9,7 +9,7 @@ import (
 func selectHero() bool {
 	x := 1061
 	y := 799
-	_count := 5
+	_count := 10
 	for _count > 0 {
 		robotgo.Move(x, y) // hero
 		color := robotgo.GetPixelColor(x, y)
