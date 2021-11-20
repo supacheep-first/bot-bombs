@@ -13,17 +13,17 @@ func main() {
 	infinity := 1
 	for {
 		// re tab every 5 hr.
-		if infinity%5 == 0 {
+		if infinity%15 == 0 {
 			doRefresh()
 		}
-		if infinity%5 == 0 || infinity == 1 {
+		if infinity%15 == 0 || infinity == 1 {
 			if !login() {
 				doRefresh()
 				continue
 			}
 		}
 
-		if !selectHero() {
+		if !selectHero2() {
 			infinity = 0
 			continue
 		}

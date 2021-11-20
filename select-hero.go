@@ -7,13 +7,13 @@ import (
 )
 
 func selectHero() bool {
-	x := 1061
-	y := 799
+	x := 1069
+	y := 769
 	_count := 10
 	for _count > 0 {
 		robotgo.Move(x, y) // hero
 		color := robotgo.GetPixelColor(x, y)
-		if color == "f5f1ed" {
+		if color == "27283b" {
 			robotgo.Click("left")
 			fmt.Println("click hero")
 			break
