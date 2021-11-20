@@ -41,15 +41,15 @@ func selectHero() bool {
 
 	// make hero go work NOW!!!
 	for {
-		x := 574
-		y := 762
+		x := 556
+		y := 754
 		robotgo.Move(x, y) // work
 		color := robotgo.GetPixelColor(x, y)
 		if color == "7c9e52" || color == "6f8d5a" {
 			robotgo.Click("left")
 			robotgo.Sleep(1)
 		} else if color == "e6b7a7" {
-			robotgo.Move(923, 361) // error overload
+			robotgo.Move(928, 371) // error overload
 			robotgo.Sleep(1)
 			robotgo.Click("left")
 			robotgo.Sleep(1)
@@ -59,7 +59,7 @@ func selectHero() bool {
 		}
 	}
 
-	robotgo.Move(711, 365) // close dialog hero
+	robotgo.Move(716, 355) // close dialog hero
 	robotgo.Click("left")
 	fmt.Println("click close dialog hero")
 	robotgo.Sleep(10)
