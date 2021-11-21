@@ -6,7 +6,7 @@ import (
 	"github.com/go-vgo/robotgo"
 )
 
-func mainc() {
+func mains() {
 	robotgo.MilliSleep(2)
 	x, y := robotgo.GetMousePos()
 	fmt.Println("pos: ", x, y)

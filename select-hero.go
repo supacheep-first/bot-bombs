@@ -16,6 +16,7 @@ func selectHero() bool {
 		if color == "27283b" {
 			robotgo.Click("left")
 			fmt.Println("click hero")
+			robotgo.Sleep(5)
 			break
 		}
 
@@ -41,22 +42,29 @@ func selectHero() bool {
 
 	// make hero go work NOW!!!
 	for {
-		x := 556
-		y := 754
+		x := 561
+		y := 732
 		robotgo.Move(x, y) // work
 		color := robotgo.GetPixelColor(x, y)
-		if color == "7c9e52" || color == "6f8d5a" {
+		if color == "7c9e52" || color == "6f8d5a" || color == "73935e" || color == "739254" || color == "779858" || color == "57815b" {
+			robotgo.Sleep(1)
 			robotgo.Click("left")
 			robotgo.Sleep(1)
 		} else if color == "e6b7a7" {
-			robotgo.Move(928, 371) // error overload
-			robotgo.Sleep(1)
-			robotgo.Click("left")
-			robotgo.Sleep(1)
-			fmt.Println("close overload")
-		} else if color == "a5d386" {
+			_over := 0
+			for _over <= 3 {
+				robotgo.Move(928, 371) // error overload
+				robotgo.Sleep(1)
+				robotgo.Click("left")
+				robotgo.Sleep(1)
+				fmt.Println("close overload")
+				_over++
+				break
+			}
+		} else if color == "a5d386" || color == "82c188" {
 			break
 		}
+		robotgo.MilliSleep(20.0)
 	}
 
 	robotgo.Move(716, 355) // close dialog hero

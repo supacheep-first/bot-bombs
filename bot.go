@@ -16,7 +16,7 @@ func bot() bool {
 	fmt.Println("click treasure mode")
 	robotgo.Sleep(10)
 
-	for i := 0; i < 15; i++ {
+	for i := 0; i < 45; i++ {
 
 		ctl := robotgo.GetPixelColor(919, 616)
 		ctr := robotgo.GetPixelColor(246, 376)
@@ -24,7 +24,7 @@ func bot() bool {
 		cbr := robotgo.GetPixelColor(1012, 700)
 
 		if ctl == "150f1b" && ctr == "150f1b" && cbt == "150f1b" && cbr == "150f1b" {
-			fmt.Errorf("found manual , unknow, something error set me hack to home page")
+			fmt.Println("found manual , unknow, something error set me hack to home page")
 			return false
 		}
 
