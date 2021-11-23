@@ -40,6 +40,7 @@ func selectHero() bool {
 	}
 
 	// make hero go work NOW!!!
+	_overload := 16
 	for {
 		x := 574
 		y := 762
@@ -54,6 +55,11 @@ func selectHero() bool {
 			robotgo.Click("left")
 			robotgo.Sleep(1)
 			fmt.Println("close overload")
+			_overload--
+			if _overload == 0 {
+				fmt.Println("bug overload many times")
+				return false
+			}
 		} else if color == "a5d386" {
 			break
 		}
