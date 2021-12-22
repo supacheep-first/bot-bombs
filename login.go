@@ -24,8 +24,6 @@ func login() bool {
 		}
 	}
 
-	checkRobot()
-
 	for i := 0; i < 10; i++ {
 		colors = getlineColors(1135, 1226, 680)
 		if compareColor(colors, "037dd6") {
