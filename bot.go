@@ -23,14 +23,15 @@ func bot() {
 		// robotgo.Sleep(6) // 6s
 
 		if i%2 == 0 {
-			// last click next map
-			robotgo.Click("left")
-			robotgo.Sleep(5)
-
 			robotgo.Move(217, 277) //back to home
 			robotgo.Click("left")
 			fmt.Println("click back to home")
 			robotgo.Sleep(5)
+
+			robotgo.Move(637, 530) //treasure mode
+			robotgo.Click("left")
+			fmt.Println("click treasure mode")
+			robotgo.Sleep(2)
 		}
 	}
 
