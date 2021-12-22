@@ -49,12 +49,6 @@ func selectHero() bool {
 			robotgo.Sleep(1)
 		} else if color == "a5d386" {
 			break
-		} else {
-			robotgo.Move(432, 734)
-			robotgo.MouseToggle("down")
-			robotgo.MoveSmooth(427, 349, 1.0, 100.0)
-			robotgo.MouseToggle("up")
-			robotgo.Sleep(1)
 		}
 	}
 
