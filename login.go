@@ -9,14 +9,14 @@ import (
 func login() bool {
 	var colors []string
 	for i := 0; i < 10; i++ {
-		colors = getlineColors(562, 724, 764)
+		colors = getlineColors(552, 709, 734)
 
 		if compareColors(colors, "f5a322", "ffaa23") {
-			robotgo.Move(642, 737)
+			robotgo.Move(552, 734)
 			robotgo.Click("left") // connect wallet
 			fmt.Println("click connect wallet")
 			robotgo.Sleep(5)
-			continue
+			break
 		}
 		robotgo.Sleep(2)
 		if i == 10 {
@@ -26,6 +26,7 @@ func login() bool {
 
 	for i := 0; i < 10; i++ {
 		colors = getlineColors(1135, 1226, 680)
+		fmt.Println(colors)
 		if compareColor(colors, "037dd6") {
 			robotgo.Move(1199, 680) // connect
 			robotgo.Sleep(2)

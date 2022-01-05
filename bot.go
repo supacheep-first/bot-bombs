@@ -23,7 +23,7 @@ func bot() {
 		// robotgo.Sleep(6) // 6s
 
 		if i%2 == 0 {
-			robotgo.Move(217, 277) //back to home
+			robotgo.Move(212, 250) //back to home
 			robotgo.Click("left")
 			fmt.Println("click back to home")
 			robotgo.Sleep(5)
@@ -39,7 +39,7 @@ func bot() {
 	robotgo.Click("left")
 	robotgo.Sleep(10)
 
-	robotgo.Move(217, 277) //back to home
+	robotgo.Move(212, 250) //back to home
 	robotgo.Click("left")
 	fmt.Println("click back to home")
 	robotgo.Sleep(10)
